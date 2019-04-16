@@ -1,0 +1,59 @@
+body{
+    height: 100vh;
+    margin: 0; 
+    display: flex;
+    perspective: 600px;
+
+
+    .cube{
+        margin: auto;
+        width: 400px;
+        height: 400px;
+        position: relative;
+        
+        transform-style: preserve-3d;
+        transform: rotateY(45deg);
+        animation: spin linear infinite 10s;
+
+        @keyframes spin {
+            from {transform: rotateY(0deg); }
+            to {transform: rotateY(359deg); }
+        }
+
+        div {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+
+            &.side-1 {
+                background: rgba(221, 162, 75, 0.2);
+                transform: translate3d(-200px, 0, 0) rotateY(90deg); //hälften av bredden
+            }
+            &.side-2 {
+                background: rgba(231, 119, 74, 0.2);
+                transform: translate3d(200px, 0, 0) rotateY(-90deg); //hälften av bredden
+            }
+            &.side-3 {
+                background: rgba(231, 221, 74, 0.2);
+                transform: translate3d(0,200px, 0, ) rotatex(90deg); //hälften av bredden
+            }
+            &.side-4 {
+                background: rgba(126, 228, 106, 0.2);
+                transform: translate3d(0,-200px, 0, ) rotatex(90deg); //hälften av bredden
+            }
+            &.side-5 {
+                background: rgba(106, 228, 208, 0.2);
+                transform: translate3d(0,0,200px) rotatex(0deg); //hälften av bredden
+            }
+            &.side-6 {
+                background: rgba(174, 124, 231, 0.2);
+                transform: translate3d(0,0,-200px) rotatex(0deg); //hälften av bredden
+            }
+        }
+    }
+}

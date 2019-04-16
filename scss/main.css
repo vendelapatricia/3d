@@ -1,0 +1,97 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+}
+
+body .cube {
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(45deg);
+          transform: rotateY(45deg);
+  -webkit-animation: spin linear infinite 10s;
+          animation: spin linear infinite 10s;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(359deg);
+            transform: rotateY(359deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(359deg);
+            transform: rotateY(359deg);
+  }
+}
+
+body .cube div {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+body .cube div.side-1 {
+  background: rgba(221, 162, 75, 0.2);
+  -webkit-transform: translate3d(-200px, 0, 0) rotateY(90deg);
+          transform: translate3d(-200px, 0, 0) rotateY(90deg);
+}
+
+body .cube div.side-2 {
+  background: rgba(231, 119, 74, 0.2);
+  -webkit-transform: translate3d(200px, 0, 0) rotateY(-90deg);
+          transform: translate3d(200px, 0, 0) rotateY(-90deg);
+}
+
+body .cube div.side-3 {
+  background: rgba(231, 221, 74, 0.2);
+  -webkit-transform: translate3d(0, 200px, 0) rotatex(90deg);
+          transform: translate3d(0, 200px, 0) rotatex(90deg);
+}
+
+body .cube div.side-4 {
+  background: rgba(126, 228, 106, 0.2);
+  -webkit-transform: translate3d(0, -200px, 0) rotatex(90deg);
+          transform: translate3d(0, -200px, 0) rotatex(90deg);
+}
+
+body .cube div.side-5 {
+  background: rgba(106, 228, 208, 0.2);
+  -webkit-transform: translate3d(0, 0, 200px) rotatex(0deg);
+          transform: translate3d(0, 0, 200px) rotatex(0deg);
+}
+
+body .cube div.side-6 {
+  background: rgba(174, 124, 231, 0.2);
+  -webkit-transform: translate3d(0, 0, -200px) rotatex(0deg);
+          transform: translate3d(0, 0, -200px) rotatex(0deg);
+}
+/*# sourceMappingURL=main.css.map */
